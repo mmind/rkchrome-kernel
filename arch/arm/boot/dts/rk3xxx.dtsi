@@ -25,7 +25,11 @@
 		#size-cells = <1>;
 		compatible = "simple-bus";
 		ranges;
-
+		xin24m: xin24m {
+			compatible = "fixed-clock";
+			clock-frequency = <24000000>;
+			#clock-cells = <0>;
+		};
 		gic: interrupt-controller@1013d000 {
 			compatible = "arm,cortex-a9-gic";
 			interrupt-controller;
